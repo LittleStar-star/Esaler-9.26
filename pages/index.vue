@@ -57,9 +57,8 @@ export default{
     },
     async asyncData({ $axios }) {
         // if (!process.server) return
-        let str = await $axios.post("http://192.168.2.58:8066/api/GetProductiones/RandomShowPro?PageSize=100");
-        // let str = await $axios.post("api/GetProductiones/RandomShowPro?PageSize=100");
-        $axios.post("api/GetProductiones/RandomShowPro?PageSize=100")
+        // let str = await $axios.post("http://192.168.2.58:8066/api/GetProductiones/RandomShowPro?PageSize=100");
+        let str = await $axios.post("api/GetProductiones/RandomShowPro?PageSize=100");
         let res = JSON.parse(JSON.stringify(str.data));
         return {data:res}
     },

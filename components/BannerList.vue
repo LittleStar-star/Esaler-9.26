@@ -2,17 +2,18 @@
   <!-- Swiper -->
   <div class="swiper-container swiper1">
     <div class="swiper-wrapper">
-      <div class="swiper-slide" v-for="item in BannerList" :key="item.id"  v-lazy:background-image="{src: item.img}">
-        <div class="d-table" data-v-3ee36f72>
-          <div class="d-table-cell" data-v-3ee36f72>
-            <div class="container" data-v-3ee36f72>
-              <div class="hero-slider-content" data-v-3ee36f72>
-                <span data-v-3ee36f72>{{item.span}}</span>
+      <div class="swiper-slide" v-for="item in BannerList" :key="item.id"  :style="`background-image:url(${item.img})`" >
+      <!-- <div class="swiper-slide" v-for="item in BannerList" :key="item.id"   v-lazy:background-image="{src: item.img}"> -->
+        <div class="d-table" >
+          <div class="d-table-cell" >
+            <div class="container" >
+              <div class="hero-slider-content" >
+                <span >{{item.span}}</span>
                 <h1>{{item.h1}}</h1>
                 <p>{{item.p}}</p>
-                <div class="banner-btn" data-v-3ee36f72>
-                  <nuxt-link to="/products" class="default-btn" data-v-3ee36f72>
-                    <i class="ri-shopping-cart-line" data-v-3ee36f72></i>
+                <div class="banner-btn" >
+                  <nuxt-link to="/products" class="default-btn" >
+                    <i class="ri-shopping-cart-line" ></i>
                     Shop Now
                   </nuxt-link>
                 </div>
