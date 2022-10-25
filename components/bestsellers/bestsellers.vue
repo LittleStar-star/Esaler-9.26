@@ -9,7 +9,7 @@
                   :to="{name:'prodetail',query:{id:item.productionId,pro:item.productionNum,maf:item.manufacturer}}"
               >
               <!-- <img v-lazy="URL_IMG + item.imgPath" alt="Embedded - MicrocontrollersSTM32F103VCT6"/> -->
-              <img v-lazy="item.imgPath=='imgAvailable.jpg'?imgAvailable:URL_IMG + item.imgPath" alt="Embedded - MicrocontrollersSTM32F103VCT6" />
+              <img v-lazy="item.imgPath=='imgAvailable.jpg'? imgAvailable : URL_IMG + item.imgPath"  alt="Embedded - MicrocontrollersSTM32F103VCT6" />
 
               </nuxt-link>
               <div class="id">{{item.productionId}}</div>
@@ -69,6 +69,7 @@
 
 </template>
 <script>
+// import defaultImg from '../../static/images/imgAvailable.jpg'
 export default {
     props: {
     data: {
@@ -81,6 +82,8 @@ export default {
     return {
       URL_IMG:'https://image.lkrelec.com/img/',
       imgAvailable:"/_nuxt/static/images/imgAvailable.jpg",
+      // imgAvailable:defaultImg,
+
       showData:{},
       Hot_New:'Hot'
     };

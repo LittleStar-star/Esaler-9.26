@@ -2,7 +2,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   target: 'static',
   env:{
-    baseUrl: process.env.NODE_ENV === 'production' ? 'http://192.168.2.58:8066' : 'http://192.168.2.58:8066'
+    baseUrl: process.env.NODE_ENV === 'development' ? 'http://192.168.2.58:8066' : 'https://webapi.lkrelec.com'
   },
   head: {
     title: 'Esaler',

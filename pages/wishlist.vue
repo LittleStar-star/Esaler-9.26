@@ -4,7 +4,7 @@
       <div class="container">
         <form class="cart-controller mb-0">
           <div class="cart-table table-responsive">
-            <table class="table table-bordered">
+            <table class="table table-bordered" v-if="wishlist.length !==0">
               <thead>
                 <tr>
                   <th scope="col">Product</th>
@@ -96,16 +96,15 @@ export default {
   },
 
   mounted() {
-    console.log(5+656)
-    // 去除BootStrap遮罩层
-    if (document.getElementsByClassName("modal-backdrop")[0]) {
-      document.getElementsByClassName("modal-backdrop")[0].remove();
-    }
-    // 解除滚动
-    if (document.getElementsByClassName("modal-open")[0]) {
-      document.getElementsByClassName("modal-open")[0].style.overflow =
-        "inherit";
-    }
+    // // 去除BootStrap遮罩层
+    // if (document.getElementsByClassName("modal-backdrop")[0]) {
+    //   document.getElementsByClassName("modal-backdrop")[0].remove();
+    // }
+    // // 解除滚动
+    // if (document.getElementsByClassName("modal-open")[0]) {
+    //   document.getElementsByClassName("modal-open")[0].style.overflow =
+    //     "inherit";
+    // }
     this.getUrl();
   },
   methods: {

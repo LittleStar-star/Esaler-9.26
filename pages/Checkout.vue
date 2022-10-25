@@ -360,18 +360,20 @@ export default {
         console.log(ERP_data);
 
         let res = this.$axios({
-          url: "http://192.168.2.56:8080/api/WebSite/demand/add",
+          url: "api/WebSite/demand/add",
           method: "POST",
           data: JSON.stringify(ERP_data),
           headers: { "Content-type": "application/json" }
-        }).then(
+        }).then(res=>{
+          console.log(res)
+          this.list.orderNum = res.data
           this.$axios({
             url: "api/RFQ/RfqResult",
             method: "POST",
             data: JSON.stringify(list),
             headers: { "Content-type": "application/json" }
           })
-        ).then(
+        }).then(
           this.$router.push({
             path:`/success`
           })
