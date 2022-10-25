@@ -48,7 +48,6 @@ export default {
     
     '~plugins/element-ui/element-ui.js',
     { src: '~/plugins/store.js', ssr: false },
-    '@/plugins/Message.js' ,
 
 
 	    // { src: '~/plugins/main.js', ssr: true },
